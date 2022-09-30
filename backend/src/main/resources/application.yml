@@ -30,7 +30,6 @@ logging:
 
 image:
 #  path: ..
-  # 운영체제별로 따로 지정
 
 jwt:
 #  secret: ..
