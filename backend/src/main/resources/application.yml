@@ -1,11 +1,12 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${spring.datasource.url}
+    username: ${spring.datasource.username}
+    password: ${spring.datasource.password}
   config:
     import: 'aws-parameterstore:'
-#    url: ..
-#    username: ..
-#    password: ..
+
 
 
   jpa:
@@ -31,10 +32,10 @@ logging:
               BasicBinder: TRACE
 
 image:
-#  path: ..
+  path: ${image.path}
 
 jwt:
-#  secret: ..
+  secret: ${jwt.secret}
   header: Authorization
   prefix: "Bearer "
 
@@ -42,8 +43,8 @@ mail:
   smtp:
     host: smtp.gmail.com
     port: 587
-#    username: ..
-#    password: ..
+    username: ${mail.smtp.username}
+    password: ${mail.smtp.password}
     auth: true
     starttls:
       enable: true
