@@ -1,6 +1,8 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+  config:
+    import: 'aws-parameterstore:'
 #    url: ..
 #    username: ..
 #    password: ..
@@ -48,3 +50,10 @@ mail:
   subject:
     member:
       registration: Your StackOverflow Account Reset Password.
+
+aws:
+  paramstore:
+    enabled: true
+    prefix: /spring-boot-aws
+    name: main31
+    profileSeparator: _
